@@ -9,5 +9,20 @@
 <form th:action="@{/logout}" method="post">
     <input type="submit" value="Sign Out"/>
 </form>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Topic name</th>
+        <th>Description</th>
+        <th>url</th>
+    </tr>
+    <tr th:each="topic : ${topics}">
+        <td th:text="${topic.id}"></td>
+        <td th:text="${topic.topicName}"></td>
+        <td th:text="${topic.description}"></td>
+        <td th:text="${topic.url}"></td>
+    </tr>
+</table>
 </body>
 </html>
